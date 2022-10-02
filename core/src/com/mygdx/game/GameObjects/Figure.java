@@ -2,6 +2,7 @@ package com.mygdx.game.GameObjects;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
+import com.badlogic.gdx.math.Circle;
 import com.badlogic.gdx.math.Rectangle;
 
 public class Figure {
@@ -36,6 +37,7 @@ public class Figure {
         this.ySpeed = ySpeed;
         rectangle = new Rectangle(x,y,width,height);
     }
+
 
     protected void draw(ShapeRenderer shapeRenderer){
         rectangle.x = x;

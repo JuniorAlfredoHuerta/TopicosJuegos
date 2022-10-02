@@ -15,8 +15,8 @@ public class BrickFactory implements IFactory {
     }
 
     public void build(int index,int y){
-        Brick brick = new Brick(0, 0,40,10);
-        int x = index * (brick.getWidth() + 20);
+        Brick brick = new Brick(0, 0,20,20);
+        int x = index * (brick.getWidth() + 30);
         brick.setY(Gdx.graphics.getHeight() - brick.getHeight() - y);
         brick.setX(x);
         bricks.add(brick);
