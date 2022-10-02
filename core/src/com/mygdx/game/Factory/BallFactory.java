@@ -3,7 +3,6 @@ package com.mygdx.game.Factory;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.mygdx.game.GameObjects.Ball;
-import com.mygdx.game.GameObjects.Paddle;
 import com.mygdx.game.Interface.IFactory;
 
 
@@ -26,12 +25,6 @@ public class BallFactory implements IFactory {
 
     public void setBall(Ball ball) {
         this.ball = ball;
-    }
-
-    public void collideWithPaddle(Paddle paddle) {
-        if (ball.collideWith(paddle)) {
-            ball.bounce();
-        }
     }
 
     @Override

@@ -34,14 +34,6 @@ public class BallasFactory implements IFactory {
 
     }
 
-    public void collideWithBall(Ball ball){
-        for (int i = 0; i < ballass.size(); i++) {
-            if(ballass.get(i).collideWith(ball)){
-                ballass.set(i,null);
-                ballass.remove(i);
-            }
-        }
-    }
 
     @Override
     public void destroy() {

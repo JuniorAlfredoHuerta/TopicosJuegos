@@ -14,20 +14,18 @@ public class Figure {
     protected int height;
     protected int width;
     protected Rectangle rectangle;
-    protected Color color = Color.WHITE;
+    protected Color color = Color.PINK;
 
-    public Figure(int x, int y, int width, int height) {
+    public Figure(int x, int y, int width, int height,int xSpeed,int ySpeed) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
+        this.xSpeed = xSpeed;
+        this.ySpeed = ySpeed;
         rectangle = new Rectangle(x,y,width,height);
     }
 
-    public Figure(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
 
     public Figure(int x, int y, int size, int xSpeed, int ySpeed){
         this.x = x;
@@ -44,6 +42,7 @@ public class Figure {
         rectangle.y = y;
         shapeRenderer.setColor(color);
     }
+
 
     protected Rectangle getArea(){
         return rectangle;

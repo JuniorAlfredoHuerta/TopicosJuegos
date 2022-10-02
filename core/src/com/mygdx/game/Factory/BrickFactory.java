@@ -15,7 +15,7 @@ public class BrickFactory implements IFactory {
     }
 
     public void build(int index,int y){
-        Brick brick = new Brick(0, 0,20,20);
+        Brick brick = new Brick(0, 0,20,20,5,5);
         int x = index * (brick.getWidth() + 30);
         brick.setY(Gdx.graphics.getHeight() - brick.getHeight() - y);
         brick.setX(x);
@@ -38,6 +38,7 @@ public class BrickFactory implements IFactory {
             brick.render(renderer);
         }
     }
+
 
     @Override
     public void destroy() {

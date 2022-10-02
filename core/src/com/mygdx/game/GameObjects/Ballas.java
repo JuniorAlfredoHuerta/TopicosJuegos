@@ -23,6 +23,17 @@ public class Ballas extends Figure  implements IFigure {
         shapeRenderer.circle(x,y,size);
     }
 
+    protected void update() {
+        x += xSpeed;
+        y += ySpeed;
+        if (x < 0 || x > Gdx.graphics.getWidth()) {
+            xSpeed = -xSpeed;
+        }
+        if (y < 0 || y > Gdx.graphics.getHeight()) {
+            ySpeed = -ySpeed;
+        }
+    }
+
     @Override
     public void render(ShapeRenderer shapeRenderer) {
         draw(shapeRenderer);
